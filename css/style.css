@@ -1,0 +1,132 @@
+/*
+ 1- Common Styles
+ 2- General Styles
+ 3- Sections 
+    3.0 Header Section
+    3.1 Home Section
+    3.2 About Section
+    3.3 Portfolio Section
+    3.4 Services Section
+    3.5 Prices Section
+    3.6 Team Section
+    3.7 Blog Section
+    3.8 Contact Section
+    3.9 Footer  Section
+*/
+
+/*1-Common*/
+/*
+    -container
+    -overlay
+    -opacity: hover
+    -section header
+    -section padding
+    -hover effect 1 (left to right)
+    -hover effect 2 (top tp bottom)
+*/
+/*2-General CSS Styles*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --maincolor: #6195ff;
+  --graycolor: #999;
+  --whitecolor: #fff;
+}
+ul {
+  list-style: none;
+}
+.ltr-effect,
+.ttb-effect {
+  position: relative;
+}
+.ltr-effect::after,
+.ttb-effect::after {
+  position: absolute;
+  content: "";
+  background: #333;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.ltr-effect::after {
+  width: 0;
+  transition: width 0.5s;
+}
+
+.ltr-effect:hover:after {
+  width: 100%;
+}
+
+.ttb-effect::after {
+  height: 0;
+  transition: height 0.5s;
+}
+
+.ttb-effect:hover:after {
+  height: 100%;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.hover-opacity {
+  transition: opacity 0.5s;
+}
+.hover-opacity:hover {
+  opacity: 0.8;
+}
+.section-title {
+  font-size: 30px;
+  text-align: center;
+}
+button {
+  font-family: inherit;
+}
+body {
+  font-family: "Varela Round", sans-serif;
+}
+.clear-fix {
+  clear: both;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: mont-serrat, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+.pd-y {
+  padding: 120px 0;
+}
+/*3 Sections Styles*/
+/*3.0 Header Section*/
+/*3.1-Home Section*/
+/*3.2-About Section*/
+/*3.3-Portfolio Section*/
+
+/*3.4-Offer Section*/
+
+/*3.5-Services Section*/
+
+/*3.6-Numbers Section*/
+
+/*3.8-Contact Section*/
